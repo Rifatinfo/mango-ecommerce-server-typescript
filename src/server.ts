@@ -7,13 +7,13 @@ app.use(express.json());
 const port = 5000;
 
 app.listen(port, () => {
-  console.log(`Library Management api listening on port ${port}`)
+  console.log(`Mango Server api listening on port ${port}`)
 })
 
 async function server() {
   try{
     await mongoose.connect("")
-    console.log(`Library Management server is running port ${port}`);
+    console.log(`Mango Server server is running port ${port}`);
     
   }catch(error){
     console.log(error);
