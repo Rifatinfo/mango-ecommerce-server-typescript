@@ -2,11 +2,11 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import config from "./config";
+import userRoute from "./mango-module/user/user.route";
 const app = express()
 app.use(cors())
 app.use(express.json());
-// const port = 5000;
-
+app.use(userRoute);
 app.listen(config.port, () => {
   console.log(config);
   
