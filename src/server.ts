@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import config from "./config";
@@ -11,6 +11,10 @@ app.listen(config.port, () => {
   console.log(config);
   
   console.log(`Mango Server api listening on port `)
+})
+
+app.get("/" , (req : Request, res : Response) =>{
+  res.json({success : true , message : "Mango Server Is Running !!!"});
 })
 
 async function server() {
